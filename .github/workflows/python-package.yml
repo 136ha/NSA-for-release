@@ -9,18 +9,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-
-name: Run Crawler - Update data # 워크플로우 이름 지정
-
-on:
-  schedule:
-    - cron:  '*/20 * * * *' # 주기적으로 실행하기 위한 스케줄링 - cron 설정
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.x
