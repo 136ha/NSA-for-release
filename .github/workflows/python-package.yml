@@ -47,7 +47,6 @@ jobs:
     - name: Push
       uses: ad-m/github-push-action@master
       with:
-        persist-credentials: false
-        fetch-depth: 0
+        force: true
         branch: 'master'
         github_token: $
