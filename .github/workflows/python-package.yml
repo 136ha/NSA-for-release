@@ -4,9 +4,9 @@
 name: Python package
 
 on:
-  pull_request:
-    branches: [ main ]
   push:
+    branches: [ main ]
+  pull_request:
     branches: [ main ]
     
   schedule:
@@ -39,6 +39,9 @@ jobs:
         git config --local user.name "Auto_Crawler_Name" # 커밋에 포함될 이름
         git add news.json
         git commit -m "Auto - Update data with Crawling" # 커밋 메세지
+    - name: push(force)
+      run: |
+        git --force push origin Auto - Update data with Crawling
     - name: Push
       uses: ad-m/github-push-action@master
       with:
