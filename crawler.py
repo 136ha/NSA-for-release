@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
 import json
 import os
 import re
