@@ -4,10 +4,11 @@
 name: Python package
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
+  push:
+    branches: [ main ]
+    
   schedule:
     - cron:  '*/20 * * * *' # 주기적으로 실행하기 위한 스케줄링 - cron 설정
 
