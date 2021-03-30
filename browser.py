@@ -22,7 +22,7 @@ from nltk.corpus import stopwords
 import matplotlib.font_manager as fm
 # 설치된 폰트 출력
 font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
-print(font_list)
+st.write(font_list)
 
 font_family = "gothic"
 plt.rcParams["font.family"] = font_family
