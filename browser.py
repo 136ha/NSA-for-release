@@ -1,10 +1,10 @@
 import re
 import os
 import time
+import json
 import sys
 from konlpy.tag import Okt
 from collections import Counter
-from tqdm import tqdm
 import numpy as np
 import pandas as pd
 from datetime import datetime
