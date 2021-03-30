@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 import nltk
 from nltk.corpus import stopwords
 
-# import matplotlib.font_manager as fm
+import matplotlib.font_manager as fm
 
 # 설치된 폰트 출력
 # font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
@@ -83,7 +83,7 @@ return_obj = wordcloud.visualize(words, per_word_coloring=True)
 # hue값은 항상 변수가 적은 것으로 해야 이쁨.
 data = pd.DataFrame(noun_adj_adv_list, columns=['words'])
 
-path = '/usr/share/fonts/truetype/unfonts-core/UnBatang.ttf'
+path = '/usr/share/fonts/truetype/unfonts-core/UnDotum.ttf'
 fontprop = fm.FontProperties(fname=path, size=18)
 plt.figure(figsize=(6,6))
 sns.set_palette("pastel")
@@ -91,7 +91,7 @@ ax = sns.countplot(x='words', data=data, order=data['words'].value_counts()[:12]
 plt.title('Top 12 뉴스 키워드 순위', fontsize=12, fontproperties=fontprop)
 plt.xlabel('뉴스 키워드', fontsize=12, fontproperties=fontprop)
 plt.ylabel('누적 개수', fontsize=12, fontproperties=fontprop)
-plt.xticks(labelsize=8, fontproperties=fontprop)
+plt.xticks(fontsize=8, fontproperties=fontprop)
 sns.despine()
 
 # ax.figure.savefig("business_anlytics_bar.png")
