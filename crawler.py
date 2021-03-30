@@ -134,13 +134,8 @@ with open(os.path.join(BASE_DIR, 'news.json'), 'w+',encoding='utf-8') as json_fi
 
 print('뉴스기사크롤러 끝')
 
-import os
-import json
 from konlpy.tag import Okt
 from collections import Counter
-from tqdm import tqdm
-import numpy as np
-import pandas as pd
 from wordcloud import WordCloud
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -155,12 +150,7 @@ print(font_list)
 font_family = "gothic"
 plt.rcParams["font.family"] = font_family
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-with open(os.path.join(BASE_DIR, 'news.json'), 'r') as f:
-    json_data = json.load(f)
-
-dataset = list(json.dumps(json_data))
+dataset = temp_data
 
 # 형태소 분석
 okt = Okt() 
