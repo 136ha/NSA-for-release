@@ -183,7 +183,7 @@ wordcloud = WordCloud(
     height = 800
 )
 
-wordcloud_words = WordCloud.generate_from_frequencies(words)
+wordcloud_words = wordcloud.generate_from_frequencies(words)
 
 array = wordcloud.to_array()
 
