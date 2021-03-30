@@ -1,6 +1,5 @@
 default-jre
-
-apt-get update
-apt-get install language-pack-ko
-apt-get install korean*
-apt-get install fonts-unfonts-core
+update
+language-pack-ko
+korean*
+fonts-unfonts-core
