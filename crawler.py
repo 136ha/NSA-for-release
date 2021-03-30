@@ -145,10 +145,10 @@ import matplotlib.font_manager as fm
 # 설치된 폰트 출력
 # font_list = [font.name for font in fm.fontManager.ttflist]
 # print(font_list)
-font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
-print(font_list[:50])
+# font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
+# print(font_list[:50])
 
-font_family = "Ungraphic.otf"
+font_family = "/usr/share/fonts/truetype/unfonts-core/Ungraphic.ttf"
 plt.rcParams["font.family"] = font_family
 
 dataset = temp_data
@@ -177,7 +177,7 @@ noun_adj_adv_list = [x for x in noun_adj_adv_list if len(x)>1]
 count = Counter(noun_adj_adv_list)
 words = dict(count.most_common())
 wordcloud = WordCloud(
-    font_path = '/Library/Fonts/Ungraphic.otf',
+    font_path = '/usr/share/fonts/truetype/unfonts-core/Ungraphic.ttf',
     background_color='white',
     colormap = 'Accent_r',
     width = 800,
