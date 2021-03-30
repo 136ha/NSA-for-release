@@ -145,6 +145,8 @@ import matplotlib.font_manager as fm
 # 설치된 폰트 출력
 font_list = [font.name for font in fm.fontManager.ttflist]
 print(font_list)
+font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
+print(font_list[:5])
 
 font_family = "Ungraphic.otf"
 plt.rcParams["font.family"] = font_family
