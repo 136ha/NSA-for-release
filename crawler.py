@@ -146,7 +146,7 @@ import matplotlib.font_manager as fm
 font_list = [font.name for font in fm.fontManager.ttflist]
 print(font_list)
 
-font_family = "Ungraphic"
+font_family = "Ungraphic.otf"
 plt.rcParams["font.family"] = font_family
 
 dataset = temp_data
@@ -175,7 +175,7 @@ noun_adj_adv_list = [x for x in noun_adj_adv_list if len(x)>1]
 count = Counter(noun_adj_adv_list)
 words = dict(count.most_common())
 wordcloud = WordCloud(
-    font_path = '/Library/Fonts/Ungraphic.ttf',
+    font_path = '/Library/Fonts/Ungraphic.otf',
     background_color='white',
     colormap = 'Accent_r',
     width = 800,
