@@ -64,7 +64,6 @@ wordcloud = WordCloud(
     width = 800,
     height = 800
 )
-return_obj = wordcloud.visualize([words])
 
 wordcloud_words = wordcloud.generate_from_frequencies(words)
 
