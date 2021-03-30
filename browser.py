@@ -14,7 +14,7 @@ import requests
 import streamlit as st
 
 from wordcloud import WordCloud
-# import streamlit_wordcloud as wordcloud
+import streamlit_wordcloud as wordcloud
 import seaborn as sns
 import matplotlib.pyplot as plt
 import nltk
@@ -57,24 +57,26 @@ noun_adj_adv_list = [x for x in noun_adj_adv_list if len(x)>1]
 
 count = Counter(noun_adj_adv_list)
 words = dict(count.most_common())
-wordcloud = WordCloud(
-    font_path = 'malgun.ttf',
-    background_color='white',
-    colormap = 'Accent_r',
-    width = 800,
-    height = 800
-)
+# wordcloud = WordCloud(
+#     font_path = 'malgun.ttf',
+#     background_color='white',
+#     colormap = 'Accent_r',
+#     width = 800,
+#     height = 800
+# )
 
-wordcloud_words = wordcloud.generate_from_frequencies(words)
+# wordcloud_words = wordcloud.generate_from_frequencies(words)
 
-array = wordcloud.to_array()
+# array = wordcloud.to_array()
 
-fig = plt.figure(figsize=(6, 6))
-plt.imshow(array, interpolation="bilinear")
-plt.axis('off')
+# fig = plt.figure(figsize=(6, 6))
+# plt.imshow(array, interpolation="bilinear")
+# plt.axis('off')
 # plt.show()
 
 # fig.savefig('business_anlytics_worldcloud.png')
+
+return_obj = wordcloud.visualize(words, per_word_coloring=True)
 
 # hue값은 항상 변수가 적은 것으로 해야 이쁨.
 data = pd.DataFrame(noun_adj_adv_list, columns=['words'])
@@ -98,7 +100,8 @@ st.pyplot(plt)
 
 st.write('상위 12개의 키워드만으로는 아쉬울 수 있기 때문에 wordcloud image를 첨부해 두겠습니다. font 크기가 클 수록 중요도가 높은 키워드이며, \
     많은 키워드를 살펴볼 수 있다는 장점이 있습니다. 여러모로 유용하게 사용이 될 수 있다면 좋겠습니다.')
-st.pyplot(ax.figure)
+# st.pyplot(ax.figure)
+st.write(return_obj)
 
 # 뉴스 분석하기
 politician_list = ['대북', '김정은', '북한', '윤석열', '황교안', '이재명', '유시민', '박영선', '유승민', '이낙연', '안철수', '추미애', '오세훈']
