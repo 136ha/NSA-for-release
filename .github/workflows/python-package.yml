@@ -36,7 +36,6 @@ jobs:
     - name: Run Crawler with python
       run: |
         python "crawler.py"
-        python "visualization.py"
     - name: Commits
       run: |
         git config --local user.email "requests.selenium@gmail.com"
