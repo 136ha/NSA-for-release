@@ -44,8 +44,8 @@ jobs:
         git commit -m "Auto - Update data with Crawling" -a # 커밋 메세지
         
     - name: Push
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@main
       with:
         force: true
-        branch: 'master'
+        branch: 'main'
         github_token: $
