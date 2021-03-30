@@ -1,5 +1,3 @@
 default-jre
-update
-language-pack-ko
 korean*
 fonts-unfonts-core
