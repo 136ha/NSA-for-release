@@ -176,14 +176,14 @@ noun_adj_adv_list = [x for x in noun_adj_adv_list if len(x)>1]
 count = Counter(noun_adj_adv_list)
 words = dict(count.most_common())
 wordcloud = WordCloud(
-    font_path = 'malgun.ttf',
+    font_path = 'Ungraphic.ttf',
     background_color='white',
     colormap = 'Accent_r',
     width = 800,
     height = 800
 )
 
-wordcloud_words = wordcloud.generate_from_frequencies(words)
+wordcloud_words = WordCloud(font_path='Ungraphic.ttf').generate_from_frequencies(words)
 
 array = wordcloud.to_array()
 
