@@ -66,7 +66,11 @@ words = dict(count.most_common())
 #     width = 800,
 #     height = 800
 # )
-st.write(words)
+
+temp_list = []
+for keys, values in words.items():
+    temp_dict = dict(text=keys, value=values)
+    temp_list.append(temp_dict)
 
 # wordcloud_words = wordcloud.generate_from_frequencies(words)
 
@@ -79,7 +83,7 @@ st.write(words)
 
 # fig.savefig('business_anlytics_worldcloud.png')
 
-return_obj = wordcloud.visualize(words, tooltip_data_fields={'text':'word', 'value':'count'}, per_word_coloring=True)
+return_obj = wordcloud.visualize(temp_list, tooltip_data_fields={'text':'word', 'value':'count'}, per_word_coloring=True)
 
 # hue값은 항상 변수가 적은 것으로 해야 이쁨.
 data = pd.DataFrame(noun_adj_adv_list, columns=['words'])
