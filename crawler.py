@@ -7,7 +7,6 @@ from datetime import datetime
 import numpy as np
 import pandas as pd
 
-from tqdm import tqdm
 import json
 import os
 import re
@@ -53,7 +52,7 @@ headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit
 # 정치 속보
 naver = []
 
-for n in tqdm(range(1, 10)):
+for n in range(1, 10):
     url = f'https://news.naver.com/main/list.nhn?mode=LSD&mid=sec&sid1=100&date={today}&page={n}'
     
     resp = requests.get(url, headers=headers)
@@ -67,7 +66,7 @@ for n in tqdm(range(1, 10)):
 
 # 경제 속보
 
-for n in tqdm(range(1, 10)):
+for n in range(1, 10):
     url = f'https://news.naver.com/main/list.nhn?mode=LSD&mid=sec&sid1=101&date={today}&page={n}'
     
     resp = requests.get(url, headers=headers)
@@ -176,7 +175,7 @@ noun_adj_adv_list = [x for x in noun_adj_adv_list if len(x)>1]
 count = Counter(noun_adj_adv_list)
 words = dict(count.most_common())
 wordcloud = WordCloud(
-    font_path = 'Ungraphic',
+    font_path = '/Library/Fonts/Ungraphic.ttf',
     background_color='white',
     colormap = 'Accent_r',
     width = 800,
