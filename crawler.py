@@ -148,7 +148,7 @@ import matplotlib.font_manager as fm
 # font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
 # print(font_list[:50])
 
-font_family = "/usr/share/fonts/truetype/unfonts-core/Ungraphic.otf"
+font_family = "Ungraphic"
 plt.rcParams["font.family"] = font_family
 
 dataset = temp_data
@@ -177,7 +177,7 @@ noun_adj_adv_list = [x for x in noun_adj_adv_list if len(x)>1]
 count = Counter(noun_adj_adv_list)
 words = dict(count.most_common())
 wordcloud = WordCloud(
-    font_path = '/usr/share/fonts/truetype/unfonts-core/Ungraphic.otf',
+    font_path = '/usr/share/fonts/truetype/unfonts-core/Ungraphic.ttf',
     background_color='white',
     colormap = 'Accent_r',
     width = 800,
