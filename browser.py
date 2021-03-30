@@ -19,12 +19,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import nltk
 from nltk.corpus import stopwords
-import matplotlib.font_manager as fm
-# 설치된 폰트 출력
-font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
-st.write(font_list)
 
-font_family = "gothic"
+# import matplotlib.font_manager as fm
+
+# 설치된 폰트 출력
+# font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
+# st.write(font_list)
+
+font_family = "UnBatang"
 plt.rcParams["font.family"] = font_family
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -58,7 +60,7 @@ noun_adj_adv_list = [x for x in noun_adj_adv_list if len(x)>1]
 count = Counter(noun_adj_adv_list)
 words = dict(count.most_common())
 # wordcloud = WordCloud(
-#     font_path = 'malgun.ttf',
+#     font_path = '/usr/share/fonts/truetype/unfonts-core/UnBatang.ttf',
 #     background_color='white',
 #     colormap = 'Accent_r',
 #     width = 800,
@@ -81,6 +83,7 @@ return_obj = wordcloud.visualize(words, per_word_coloring=True)
 # hue값은 항상 변수가 적은 것으로 해야 이쁨.
 data = pd.DataFrame(noun_adj_adv_list, columns=['words'])
 
+plt.rc('font', family=font_family)
 plt.figure(figsize=(6,6))
 sns.set_palette("pastel")
 ax = sns.countplot(x='words', data=data, order=data['words'].value_counts()[:12].index)
