@@ -83,14 +83,15 @@ return_obj = wordcloud.visualize(words, per_word_coloring=True)
 # hue값은 항상 변수가 적은 것으로 해야 이쁨.
 data = pd.DataFrame(noun_adj_adv_list, columns=['words'])
 
-plt.rc('font', family=font_family)
+path = '/usr/share/fonts/truetype/unfonts-core/UnBatang.ttf'
+fontprop = fm.FontProperties(fname=path, size=18)
 plt.figure(figsize=(6,6))
 sns.set_palette("pastel")
 ax = sns.countplot(x='words', data=data, order=data['words'].value_counts()[:12].index)
-ax.set_title('Top 12 뉴스 키워드 순위', fontsize=12)
-ax.set_xlabel('뉴스 키워드', fontsize=12)
-ax.set_ylabel('누적 개수', fontsize=12)
-ax.tick_params(labelsize=8)
+ax.set_title('Top 12 뉴스 키워드 순위', fontsize=12, fontproperties=fontprop)
+ax.set_xlabel('뉴스 키워드', fontsize=12, fontproperties=fontprop)
+ax.set_ylabel('누적 개수', fontsize=12, fontproperties=fontprop)
+ax.tick_params(labelsize=8, fontproperties=fontprop)
 sns.despine()
 
 # ax.figure.savefig("business_anlytics_bar.png")
