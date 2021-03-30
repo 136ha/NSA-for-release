@@ -91,7 +91,7 @@ ax = sns.countplot(x='words', data=data, order=data['words'].value_counts()[:12]
 plt.title('Top 12 뉴스 키워드 순위', fontsize=12, fontproperties=fontprop)
 plt.xlabel('뉴스 키워드', fontsize=12, fontproperties=fontprop)
 plt.ylabel('누적 개수', fontsize=12, fontproperties=fontprop)
-ax.tick_params(labelsize=8)
+plt.xticks(labelsize=8, fontproperties=fontprop)
 sns.despine()
 
 # ax.figure.savefig("business_anlytics_bar.png")
