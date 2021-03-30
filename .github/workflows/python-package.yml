@@ -33,22 +33,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         
-    - name: Install ubuntu package
-      run: |        
-        sudo apt-get install language-pack-ko
-        sudo apt-get install korean*
-        sudo apt-get install fonts-unfonts-core
-        
     - name: Run Crawler with python
       run: |
         python "crawler.py"
     - name: Commits
       run: |
         git config --local user.email "requests.selenium@gmail.com"
-        git config --local user.name "Auto_Crawler_Name" # 커밋에 포함될 이름
+        git config --local user.name "Auto_Crawler" # 커밋에 포함될 이름
         git add news.json
-        git add business_anlytics_worldcloud.png
-        git add business_anlytics_bar.png
         git commit -m "Auto - Update data with Crawling" -a # 커밋 메세지
         
     - name: Push
