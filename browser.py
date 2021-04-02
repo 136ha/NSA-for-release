@@ -149,7 +149,7 @@ oh_se_hun = {'진양산업':'003780', '진양화학':'051630', 'sci평가정보'
 
 # 뉴스 관련 주가 차트 띄우기
 count = 0
-for person in list(data['words'].value_counts()[:15].index):
+for person in list(data['words'].value_counts()[:30].index):
     if person in ['북한', '김정은', '대북']:
         for key,value in north_korea.items():
             st.write('대북 테마주 : ', key, '(',value,')')
