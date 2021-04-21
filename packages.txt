@@ -1,4 +1,4 @@
-default-jdk
-default-jre
 korean*
 fonts-unfonts-core
+default-jdk
+default-jre
