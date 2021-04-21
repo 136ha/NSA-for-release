@@ -63,10 +63,10 @@ In this project, streamlit, library that turns data scripts into shareable web a
 
 ### 5.2. Blog
 [Python Streamlit 사용법 - 프로토타입 만들기](https://zzsza.github.io/mlops/2021/02/07/python-streamlit-dashboard/)  
-[[KR] Streamlit 웹 어플리케이션 배포하기 (feat. Heroku)](https://wonyoungseo.medium.com/kr-streamlit-%EC%9B%B9-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0-feat-heroku-40619e933d5a)  
 [How can I use konlpy with streamlit-sharing?](https://discuss.streamlit.io/t/how-can-i-use-konlpy-with-streamlit-sharing/11243)  
 [[GitHub] GitHub Action을 사용하여 자동 크롤링과 Push 구현하기](https://chanhuiseok.github.io/posts/git-1/)  
 [Push issue](https://github.com/ad-m/github-push-action/issues/44)  
+[How to use Chinese font in matplotlib visuals](https://discuss.streamlit.io/t/how-to-use-chinese-font-in-matplotlib-visuals/7895)  
 
 ## 6. Produced by
 
