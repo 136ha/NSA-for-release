@@ -1,4 +1,3 @@
-openjdk-8-jdk
-openjdk-8-jre
+default-jdk
 korean*
 fonts-unfonts-core
