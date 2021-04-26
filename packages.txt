@@ -1,2 +1,3 @@
+openjdk-8-jre
 korean*
 fonts-unfonts-core
