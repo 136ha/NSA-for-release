@@ -53,7 +53,7 @@ In this project, streamlit, library that turns data scripts into shareable web a
  - finance-datareader 0.9.13
 
 ## 4. Results
-[prototype](https://share.streamlit.io/136ha/nsa-for-release/main/browser.py)  
+[prototype](https://share.streamlit.io/136ha/nsa-for-release/main/browser.py) (Originally it worked without problems. The default-jre command is detected in the `packages.txt` file, but errors start to occur during the download process.)  
 
 ## 5. References
 
