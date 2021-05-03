@@ -36,11 +36,18 @@ jobs:
     - name: Run Crawler with python
       run: |
         python "crawler.py"
+        
+    - name: Run create_png with python
+      run: |
+        python "create_png.py"
+        
     - name: Commits
       run: |
         git config --local user.email "requests.selenium@gmail.com"
         git config --local user.name "Auto_Crawler" # 커밋에 포함될 이름
         git add news.json
+        git add business_anlytics_worldcloud.png
+        git add business_anlytics_bar.png
         git commit -m "Auto - Update data with Crawling" -a # 커밋 메세지
         
     - name: Push
