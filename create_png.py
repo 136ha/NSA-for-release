@@ -55,7 +55,7 @@ noun_adj_adv_list = [x for x in noun_adj_adv_list if len(x)>1]
 count = Counter(noun_adj_adv_list)
 words = dict(count.most_common())
 wordcloud = WordCloud(
-    font_path = BASE_DIR + 'UnBatang.ttf',
+    font_path = BASE_DIR + 'MALGUN.TTF',
     background_color='white',
     colormap = 'Accent_r',
     width = 800,
@@ -83,7 +83,7 @@ fig.savefig(BASE_DIR + 'business_anlytics_worldcloud.png')
 # hue값은 항상 변수가 적은 것으로 해야 이쁨.
 data = pd.DataFrame(noun_adj_adv_list, columns=['words'])
 
-path = BASE_DIR + 'UnDotum.ttf'
+path = BASE_DIR + 'MALGUN.TTF'
 fontprop = fm.FontProperties(fname=path, size=18)
 plt.figure(figsize=(6,6))
 sns.set_palette("pastel")
